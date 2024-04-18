@@ -1,7 +1,7 @@
 import pickle
 import json
 import pandas as pd
-from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.ensemble import RandomForestClassifier
 
 from utils.dataloader import DataLoader
 from settings.constants import TRAIN_CSV
@@ -20,7 +20,7 @@ loader.fit(X_raw)
 X = loader.load_data()
 y = raw_train.Vertical_Segment.iloc[X.index]
 
-model = GradientBoostingClassifier()
+model = RandomForestClassifier()
 model.fit(X, y)
-with open('models/GBC.pickle', 'wb') as f:
+with open('models/RFC.pickle', 'wb') as f:
     pickle.dump(model, f)
