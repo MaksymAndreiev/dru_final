@@ -22,5 +22,5 @@ y = raw_train.Vertical_Segment.iloc[X.index]
 
 model = RandomForestClassifier()
 model.fit(X, y)
-with open('models/RFC.pickle', 'wb') as f:
+with open('model/RFC.pickle', 'wb') as f:
     pickle.dump(model, f)
