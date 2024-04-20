@@ -119,41 +119,6 @@
     },
     {
       "operation_number": 2,
-      "operation_name": "apply_regex",
-      "params": {
-        "in_columns": [
-          "Cache",
-          "T"
-        ],
-        "out_columns": [
-          "Cache_Size",
-          "Cache_Type",
-          "T"
-        ],
-        "methods": [
-          "split",
-          "search",
-          "findall"
-        ],
-        "patterns": [
-          "(\\d+\\.?\\d*)\\s(\\w+)\\s(.*)",
-          "\\d+\\.\\d+|\\d+",
-          "\\d+\\.\\d+|\\d+"
-        ],
-        "inplaces": [
-          "False",
-          "True"
-        ],
-        "maxsplits": [
-          0
-        ],
-        "groups": [
-          0
-        ]
-      }
-    },
-    {
-      "operation_number": 3,
       "operation_name": "columns_combination",
       "params": {
         "in_columns_list": [
@@ -176,12 +141,10 @@
       }
     },
     {
-      "operation_number": 4,
+      "operation_number": 3,
       "operation_name": "fill_nans",
       "params": {
         "in_columns": [
-          "Cache_Size",
-          "Cache_Type",
           "Bus_Type",
           "TDP",
           "Max_nb_of_Memory_Channels",
@@ -199,7 +162,7 @@
       }
     },
     {
-      "operation_number": 5,
+      "operation_number": 4,
       "operation_name": "normalize",
       "params": {
         "in_columns": [
@@ -208,14 +171,13 @@
       }
     },
     {
-      "operation_number": 6,
+      "operation_number": 5,
       "operation_name": "encode_labels",
       "params": {
         "in_columns": [
           "Recommended_Customer_Price",
           "Product_Collection",
           "Lithography",
-          "Cache_Type",
           "Bus_Type"
         ]
       }
