@@ -69,25 +69,7 @@
       "Instruction_Set",
       "Idle_States",
       "Thermal_Monitoring_Technologies",
-      "Execute_Disable_Bit",
-      "Cache_Size",
-      "Cache_Type",
-      "Bus_Type",
-      "SSE",
-      "SSE2",
-      "SSE3",
-      "SSSE3",
-      "SSE4",
-      "AVX",
-      "MMX",
-      "AES",
-      "IMCI",
-      "AV2",
-      "DDR4",
-      "DDR3",
-      "DDR3L",
-      "DDR2",
-      "LPDDR3"
+      "Execute_Disable_Bit"
     ],
     "y": "Vertical_Segment",
     "metrics": "accuracy_score"
@@ -113,12 +95,76 @@
           "DirectX_Support",
           "OpenGL_Support",
           "PCI_Express_Configurations_",
-          "Secure_Key"
+          "Secure_Key",
+          "Cache",
+          "Bus_Speed",
+          "Memory_Types",
+          "Instruction_Set_Extensions"
         ]
       }
     },
     {
       "operation_number": 2,
+      "operation_name": "fill_nans",
+      "params": {
+        "in_columns": [
+          "Recommended_Customer_Price"
+        ],
+        "methods": [
+          "mode"
+        ]
+      }
+    },
+    {
+      "operation_number": 3,
+      "operation_name": "encode_labels",
+      "params": {
+        "in_columns": [
+          "Instruction_Set",
+          "Product_Collection",
+          "Lithography",
+          "Intel_64_",
+          "Embedded_Options_Available",
+          "Conflict_Free",
+          "ECC_Memory_Supported",
+          "Intel_Hyper_Threading_Technology_",
+          "Intel_Virtualization_Technology_VTx_",
+          "Idle_States",
+          "Thermal_Monitoring_Technologies",
+          "Execute_Disable_Bit"
+        ]
+      }
+    },
+    {
+      "operation_number": 4,
+      "operation_name": "fill_nans",
+      "params": {
+        "in_columns": [
+          "TDP",
+          "Max_nb_of_Memory_Channels",
+          "Max_Memory_Size",
+          "Max_Memory_Bandwidth",
+          "PCI_Express_Revision",
+          "Max_nb_of_PCI_Express_Lanes",
+          "T",
+          "Instruction_Set",
+          "Intel_64_"
+        ],
+        "methods": [
+          "mode",
+          "mode",
+          "mode",
+          "mode",
+          "mode",
+          "mode",
+          "mode",
+          "mode",
+          "mode"
+        ]
+      }
+    },
+    {
+      "operation_number": 5,
       "operation_name": "columns_combination",
       "params": {
         "in_columns_list": [
@@ -141,28 +187,7 @@
       }
     },
     {
-      "operation_number": 3,
-      "operation_name": "fill_nans",
-      "params": {
-        "in_columns": [
-          "Bus_Type",
-          "TDP",
-          "Max_nb_of_Memory_Channels",
-          "Memory_Size",
-          "Max_Memory_Bandwidth",
-          "PCI_Express_Revision",
-          "Max_nb_of_PCI_Express_Lanes",
-          "T",
-          "Instruction_Set"
-        ],
-        "methods": [
-          "mean",
-          "mode"
-        ]
-      }
-    },
-    {
-      "operation_number": 4,
+      "operation_number": 6,
       "operation_name": "normalize",
       "params": {
         "in_columns": [
@@ -171,14 +196,11 @@
       }
     },
     {
-      "operation_number": 5,
-      "operation_name": "encode_labels",
+      "operation_number": 7,
+      "operation_name": "drop_columns",
       "params": {
         "in_columns": [
-          "Recommended_Customer_Price",
-          "Product_Collection",
-          "Lithography",
-          "Bus_Type"
+          "Intel_64_"
         ]
       }
     }
