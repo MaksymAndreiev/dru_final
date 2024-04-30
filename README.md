@@ -7,6 +7,8 @@ Consists of:
 
 Original dataset can be found here: https://www.kaggle.com/iliassekkaf/computerparts.
 
+Simple classification of Intel CPUs' vertical segment (server, desktop, mobile, embedded) by given characteristics. 
+
 ## Project structure
 
 ```
