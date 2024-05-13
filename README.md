@@ -7,7 +7,13 @@ Consists of:
 
 Original dataset can be found here: https://www.kaggle.com/iliassekkaf/computerparts.
 
-Simple classification of Intel CPUs' vertical segment (server, desktop, mobile, embedded) by given characteristics. 
+Simple classification of Intel CPUs' vertical segment (server, desktop, mobile, embedded) by given characteristics.
+
+<img src="readme/cpu.svg" height="100"><img src="readme/arrow.svg" height="100"><img src="readme/server.svg" height="100">
+
+<img src="readme/cpu.svg" height="100"><img src="readme/arrow.svg" height="100"><img src="readme/desktop.svg" height="100">
+
+<img src="readme/cpu.svg" height="100"><img src="readme/arrow.svg" height="100"><img src="readme/mobile.svg" height="100">
 
 ## Project structure
 
