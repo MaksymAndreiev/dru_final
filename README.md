@@ -15,6 +15,8 @@ Simple classification of Intel CPUs' vertical segment (server, desktop, mobile, 
 
 <img src="readme/cpu.svg" height="100"><img src="readme/arrow.svg" height="100"><img src="readme/mobile.svg" height="100">
 
+<img src="readme/cpu.svg" height="100"><img src="readme/arrow.svg" height="100"><img src="readme/embedded.svg" height="100">
+
 ## Project structure
 
 ```
